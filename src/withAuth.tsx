@@ -6,12 +6,12 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { NextPage, NextPageContext } from 'next';
 import { useRouter } from 'next/router';
-import { useEffect, useMemo } from 'react';
-import { ISignInWithAuth0 } from './instance';
-import { IClaims } from './session/session';
+import React, { useEffect, useMemo } from 'react';
+import { ISignInWithAuth0 } from 'instance';
+import { IClaims } from 'session/session';
 import createLoginURL from './utils/createLoginURL';
 import fetchUserAtClient from './utils/fetchUserAtClient';
-import { UserProvider } from './utils/UserProvider';
+import { UserProvider } from 'utils/UserProvider';
 
 type HasUser = Readonly<{ user: IClaims }>;
 
